@@ -19,7 +19,7 @@ function guardarCarrito() {
 function mostrarNotificacion(mensaje) {
     const contenedorNotificaciones = document.getElementById('notifications');
     const notificacion = document.createElement('div');
-    notificacion.className = 'notification';
+    notificacion.className = 'notification alert alert-info';
     notificacion.innerText = mensaje;
     contenedorNotificaciones.appendChild(notificacion);
     setTimeout(() => {
@@ -34,18 +34,22 @@ function mostrarProductos() {
     contenedorProductos.innerHTML = '';
     productosOrdenados.forEach(producto => {
         const productoDiv = document.createElement('div');
-        productoDiv.className = 'product';
+        productoDiv.className = 'col-md-4';
         productoDiv.innerHTML = `
-            <h3>${producto.nombre}</h3>
-            <p>${producto.descripcion}</p>
-            <p>Tipo: ${producto.tipo}</p>
-            <p>Precio: $${producto.precio.toFixed(2)}</p>
-            <button data-id="${producto.id}">Agregar al Carrito</button>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">${producto.nombre}</h5>
+                    <p class="card-text">${producto.descripcion}</p>
+                    <p class="card-text">Tipo: ${producto.tipo}</p>
+                    <p class="card-text">Precio: $${producto.precio.toFixed(2)}</p>
+                    <button class="btn btn-primary" data-id="${producto.id}">Agregar al Carrito</button>
+                </div>
+            </div>
         `;
         contenedorProductos.appendChild(productoDiv);
     });
 
-    document.querySelectorAll('.product button').forEach(button => {
+    document.querySelectorAll('.card button').forEach(button => {
         button.addEventListener('click', (e) => {
             const idProducto = parseInt(e.target.getAttribute('data-id'));
             const producto = productos.find(p => p.id === idProducto);
@@ -70,9 +74,10 @@ function mostrarCarrito() {
     contenedorCarrito.innerHTML = '';
     carrito.forEach((producto, index) => {
         const productoDiv = document.createElement('div');
+        productoDiv.className = 'd-flex justify-content-between align-items-center';
         productoDiv.innerHTML = `
-            <p>${index + 1}. ${producto.nombre} - $${producto.precio.toFixed(2)}</p>
-            <button data-index="${index}">Eliminar</button>
+            <p class="mb-1">${index + 1}. ${producto.nombre}</p>
+            <button class="btn btn-danger btn-sm" data-index="${index}">Eliminar</button>
         `;
         contenedorCarrito.appendChild(productoDiv);
     });

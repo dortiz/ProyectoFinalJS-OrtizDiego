@@ -4,28 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ortiz Diego</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .product { margin-bottom: 20px; }
-        .cart { margin-top: 20px; }
-        .notification {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <h1>3° Pre-entrega</h1>
-    <div id="productos"></div>
-    <div class="cart">
-        <h2>Carrito de Compras</h2>
-        <div id="carrito"></div>
-        <p id="total"></p>
-        <button id="finalizarCompra">Finalizar Compra</button>
-        <div id="notifications"></div>
+    <div class="container">
+        <h1 class="my-4">3° Pre-entrega</h1>
+        <div id="productos" class="row"></div>
+        <div class="cart mt-4">
+            <h2>Carrito de Compras</h2>
+            <div id="carrito" class="mb-2"></div>
+            <p id="total"></p>
+            <button id="finalizarCompra" class="btn btn-primary">Finalizar Compra</button>
+            <div id="notifications" class="mt-2"></div>
+        </div>
     </div>
 
-    <script src="./main.js" type="module"></script>
+    <script src="assets/js/main.js" type="module"></script>
 </body>
 </html>
