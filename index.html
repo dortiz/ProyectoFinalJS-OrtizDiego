@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ortiz Diego</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .product {
-            margin-bottom: 20px;
-        }
-
-        .cart {
-            margin-top: 20px;
+        body { font-family: Arial, sans-serif; }
+        .product { margin-bottom: 20px; }
+        .cart { margin-top: 20px; }
+        .notification {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
-
 <body>
-    <section>
-        <h1>3° Pre-entrega JS</h1>
-        <div id="productos"></div>
-        <div class="cart">
-            <h2>Carrito de Compras</h2>
-            <div id="carrito"></div>
-            <button id="finalizarCompra">Finalizar Compra</button>
-            <p id="total"></p>
-        </div>
-    </section>
+    <h1>3° Pre-entrega</h1>
+    <div id="productos"></div>
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <div id="carrito"></div>
+        <p id="total"></p>
+        <button id="finalizarCompra">Finalizar Compra</button>
+        <div id="notifications"></div>
+    </div>
 
     <script src="./main.js" type="module"></script>
 </body>
-
 </html>

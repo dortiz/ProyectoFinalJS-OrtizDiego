@@ -15,6 +15,18 @@ function guardarCarrito() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
+// Función para mostrar notificaciones
+function mostrarNotificacion(mensaje) {
+    const contenedorNotificaciones = document.getElementById('notifications');
+    const notificacion = document.createElement('div');
+    notificacion.className = 'notification';
+    notificacion.innerText = mensaje;
+    contenedorNotificaciones.appendChild(notificacion);
+    setTimeout(() => {
+        contenedorNotificaciones.removeChild(notificacion);
+    }, 3000);
+}
+
 // Función para mostrar productos
 function mostrarProductos() {
     const productosOrdenados = productos.slice().sort((a, b) => a.precio - b.precio);
@@ -46,7 +58,7 @@ function mostrarProductos() {
 function agregarProductoAlCarrito(producto) {
     if (producto) {
         carrito.push(producto);
-        alert(`Seleccionaste ${producto.nombre}. Valor: $${producto.precio.toFixed(2)}`);
+        mostrarNotificacion(`Seleccionaste ${producto.nombre}. Valor: $${producto.precio.toFixed(2)}`);
         mostrarCarrito();
         guardarCarrito();
     }
@@ -79,11 +91,11 @@ function mostrarCarrito() {
 function eliminarProductoDelCarrito(index) {
     if (index >= 0 && index < carrito.length) {
         carrito.splice(index, 1);
-        alert("Producto eliminado del carrito.");
+        mostrarNotificacion("Producto eliminado del carrito.");
         mostrarCarrito();
         guardarCarrito();
     } else {
-        alert("Opción inválida.");
+        mostrarNotificacion("Opción inválida.");
     }
 }
 
@@ -95,7 +107,7 @@ function calcularTotal() {
 // Función para finalizar la compra
 function finalizarCompra() {
     if (carrito.length === 0) {
-        alert("El carrito está vacío.");
+        mostrarNotificacion("El carrito está vacío.");
         return;
     }
     let mensaje = "Productos en tu carrito:\n";
@@ -103,7 +115,7 @@ function finalizarCompra() {
         mensaje += `${index + 1}. ${producto.nombre}\n`;
     });
     mensaje += `\nTotal: $${calcularTotal().toFixed(2)}\n¡Gracias por tu compra!`;
-    alert(mensaje);
+    mostrarNotificacion(mensaje);
     carrito.length = 0;
     guardarCarrito();
     mostrarCarrito();
