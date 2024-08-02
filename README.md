@@ -17,9 +17,7 @@ El proyecto es un simulador de E-commerce que tendrá las siguientes caracterís
 
 ## Cómo correr el proyecto
 
-1. Clona este repositorio en tu máquina local.
-2. Abre el proyecto en tu editor de código preferido.
-3. Abre el archivo `index.html` con la extensión Live Server de VSCode o cualquier servidor local para ver la aplicación en el navegador.
+1. Ingresar al siguiente link de GitHub Page y utilizar https://dortiz.github.io/pre-entrega3JS-ortizdiego/
 
 ## Archivos principales
 
