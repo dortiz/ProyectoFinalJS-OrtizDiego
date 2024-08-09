@@ -1,71 +1,94 @@
-# pre-entrega3JS-ortizdiego
+# Tienda Online - Simulador Interactivo
+
+## Descripción
+
+Este proyecto es un simulador interactivo de una tienda online donde los usuarios pueden navegar por una selección de productos, agregar productos a un carrito de compras y finalizar la compra. La aplicación utiliza tecnologías web modernas como HTML, CSS, y JavaScript, además de integrar interacción dinámica con el DOM, manejo de eventos, almacenamiento de datos en `LocalStorage`, y la simulación de una base de datos mediante un archivo `JSON`.
+
+## Estructura del Proyecto
+
+│── /css
+│ └── styles.css # Hoja de estilo principal
+│── /js
+│ ├── main.js # Lógica principal del simulador
+│ ├── stock.js # Datos de productos
+│ └── events.js # Manejador de eventos del DOM
+│── /json
+│ └── products.json # Base de datos simulada
+├── /assets
+│ └── logo.png # Imágenes y otros recursos multimedia
+├── index.html # Documento HTML principal
+├── README.md # Instrucciones de uso y detalles del proyecto
 
 
-Este es un proyecto para el Curso de Javascript donde veremos un ejemplo de una Pre-entrega.
+## Requisitos
 
-El proyecto es un simulador de E-commerce que tendrá las siguientes características:
+Antes de ejecutar el proyecto, asegúrate de cumplir con los siguientes requisitos:
 
-- El usuario podrá visualizar una lista de productos y ordenarlos según su precio.
-- El usuario podrá buscar y filtrar productos.
-- Los productos se podrán agregar a un carrito de compras.
-- El usuario podrá visualizar los productos del carrito de compras.
-- El usuario podrá eliminar productos del carrito de compras.
-- Se le mostrará al usuario la cantidad total y el precio total de productos en el carrito de compras.
-- El usuario podrá finalizar la compra.
-- El carrito se guarda en el `localStorage` para mantener el estado entre sesiones.
-- La interfaz se maneja utilizando el DOM y eventos del usuario.
+- Navegador web moderno (Chrome, Firefox, Edge, Safari)
+- Conexión a Internet para cargar el framework Bootstrap
 
-## Cómo correr el proyecto
+## Instalación
 
-1. Ingresar al siguiente link de GitHub Page y utilizar https://dortiz.github.io/pre-entrega3JS-ortizdiego/
+No se requiere una instalación compleja. Simplemente sigue estos pasos:
 
-## Archivos principales
+1. Descarga o clona este repositorio en tu máquina local.
+2. Abre el archivo `index.html` en tu navegador web favorito.
 
-### `index.html`
+## Uso
 
-Este archivo contiene la estructura básica de la página, incluyendo el contenedor para los productos y el carrito de compras.
+### Navegación y selección de productos
 
-### `main.js`
+1. Al cargar la página, se mostrarán los productos disponibles en forma de tarjetas (cards).
+2. Cada tarjeta contiene el nombre del producto, una breve descripción, el precio, y un botón "Agregar al Carrito".
+3. Haz clic en el botón "Agregar al Carrito" para seleccionar un producto. Se añadirá automáticamente al carrito, almacenado en `LocalStorage`.
 
-Este archivo contiene la lógica principal de la aplicación, incluyendo las funciones para mostrar productos, agregar productos al carrito, eliminar productos del carrito, y finalizar la compra. También se encarga de manejar el almacenamiento del carrito en `localStorage` y la manipulación del DOM.
+### Visualización del carrito de compras
 
-### `stock.js`
+- Los productos seleccionados se mostrarán en la sección "Carrito de Compras", ubicada en la parte inferior de la página.
+- El carrito muestra el nombre de los productos seleccionados y el total acumulado de la compra.
 
-Este archivo contiene el array de productos disponibles en la tienda. Cada producto tiene propiedades como `id`, `nombre`, `tipo`, `descripcion`, `precio`, y `cantidad`.
+### Finalización de la compra
 
-## Funcionalidades
+- Haz clic en el botón "Finalizar Compra" para completar el proceso. El total de la compra se mostrará y el carrito se vaciará.
+- Al finalizar la compra, los datos del carrito se eliminan del `LocalStorage`.
 
-### Visualizar productos
+## Tecnologías Utilizadas
 
-Los productos se ordenan según su precio y se muestran en la página principal. Cada producto tiene un botón para agregarlo al carrito de compras.
+- **HTML5**: Estructura de la página web.
+- **CSS3**: Estilos y diseño de la interfaz, junto con Bootstrap para un diseño responsivo.
+- **JavaScript**: Lógica principal de la aplicación, manipulación del DOM, manejo de eventos y almacenamiento en `LocalStorage`.
+- **Bootstrap 4**: Framework CSS para el diseño responsivo.
+- **JSON**: Archivo simulado de base de datos para almacenar los productos.
 
-### Buscar y filtrar productos
+## Funcionalidades Clave
 
-El usuario puede buscar productos por nombre y filtrar productos por tipo utilizando las funciones correspondientes.
+1. **Interacción Dinámica con el DOM**: Todos los productos se generan dinámicamente en la página utilizando JavaScript.
+2. **Eventos y Manejo del Carrito**: El manejo del carrito de compras se realiza a través de eventos del DOM, con datos almacenados en `LocalStorage` para persistencia.
+3. **Uso de JSON**: Los productos se cargan desde un archivo JSON simulado, lo que permite modificar y actualizar fácilmente el catálogo de la tienda.
+4. **Responsive Design**: Gracias a Bootstrap, la aplicación es completamente responsiva y se adapta a diferentes tamaños de pantalla.
 
-### Agregar productos al carrito
+## Notas de Desarrollo
 
-Al hacer clic en el botón "Agregar al Carrito" de un producto, este se añade al carrito de compras. El estado del carrito se guarda en `localStorage` para mantener la persistencia entre sesiones.
+- El proyecto está organizado para facilitar su mantenimiento y escalabilidad.
+- Las funciones esenciales están modularizadas en diferentes archivos JS para separar responsabilidades y mejorar la legibilidad del código.
+- Se utilizó `LocalStorage` para mantener el carrito de compras persistente incluso si el usuario recarga la página.
 
-### Visualizar el carrito
+## Posibles Mejoras
 
-El usuario puede ver los productos en su carrito, junto con el precio de cada uno y el total acumulado. Los productos en el carrito se muestran en la sección correspondiente de la página.
+- **Integración con una API real**: Se puede conectar el simulador a una API para manejar productos dinámicos en tiempo real.
+- **Autenticación de Usuarios**: Se podría agregar una capa de autenticación para permitir a los usuarios iniciar sesión y guardar sus compras.
+- **Métodos de Pago**: Integrar un simulador de métodos de pago para completar la experiencia de compra.
 
-### Eliminar productos del carrito
+## Guía de Uso
 
-El usuario puede eliminar productos del carrito haciendo clic en el botón "Eliminar" junto a cada producto en el carrito.
+1. Clona el repositorio: `git clone https://github.com/dortiz/ProyectoFinalJS-OrtizDiego`
+2. Navega a la carpeta del proyecto: `cd ProyectoFinalJS-OrtizDiego`
+3. Abre `index.html` en un navegador web para iniciar la aplicación.
 
-### Finalizar la compra
+## Autor
 
-El usuario puede finalizar la compra, lo que muestra un resumen de los productos seleccionados (sin precios individuales, solo el total) y vacía el carrito.
+**Diego Ortiz** - Desarrollador Web.
 
-## Uso de JSON y Storage
+## Licencia
 
-El carrito de compras se guarda en el `localStorage` del navegador utilizando JSON. Esto permite que el carrito mantenga su estado entre diferentes sesiones del usuario.
-
-## Uso del DOM y eventos del usuario
-
-La aplicación manipula el DOM para mostrar los productos y el carrito de compras. Los eventos del usuario, como hacer clic en los botones para agregar o eliminar productos, se manejan utilizando `addEventListener` para actualizar la interfaz en tiempo real.
-
-
-
+Este proyecto está licenciado bajo los términos de la [Licencia MIT](https://opensource.org/licenses/MIT).

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "Llaveros",
+        "descripcion": "Llaveros personalizados",
+        "precio": 1500.00
+    },
+    {
+        "id": 2,
+        "nombre": "Tarjetas de Presentación",
+        "descripcion": "Tarjetas profesionales",
+        "precio": 18000.00
+    },
+    {
+        "id": 3,
+        "nombre": "Flyers",
+        "descripcion": "Flyers publicitarios",
+        "precio": 3600.00
+    },
+    {
+        "id": 4,
+        "nombre": "Sellos",
+        "descripcion": "Sellos personalizados",
+        "precio": 4500.00
+    },
+    {
+        "id": 5,
+        "nombre": "Agendas",
+        "descripcion": "Agendas anuales",
+        "precio": 11200.00
+    },
+    {
+        "id": 6,
+        "nombre": "Jarros termicos",
+        "descripcion": "Jarros térmicos",
+        "precio": 6800.00
+    }
+]
