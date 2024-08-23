@@ -1,6 +1,6 @@
 export async function obtenerProductos() {
     try {
-        const response = await fetch('./json/products.json');
+        const response = await fetch('../json/products.json');
         if (!response.ok) {
             throw new Error(`Error al obtener productos: ${response.statusText}`);
         }
