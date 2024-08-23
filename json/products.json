@@ -33,7 +33,7 @@
         "descripcion": "Catalogos Empresariales.",
         "precio": 11200.00,
         "imagen": "assets/catalogos.jpg"
-    }
+    },
     {
         "id": 6,
         "nombre": "Remeras Estampadas",
