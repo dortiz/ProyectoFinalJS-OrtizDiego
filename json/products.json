@@ -1,37 +1,44 @@
 [
     {
         "id": 1,
-        "nombre": "Tarjetas Personales",
-        "descripcion": "Tarjetas personales impresas en papel de alta calidad.",
-        "precio": 100.00,
-        "imagen": "ruta/a/imagen1.jpg"
+        "nombre": "Llaveros",
+        "descripcion": "Llaveros Personalizados.",
+        "precio": 1500.00,
+        "imagen": "assets/llaveros.jpg"
     },
     {
         "id": 2,
-        "nombre": "Flyers",
-        "descripcion": "Flyers promocionales tamaño A5.",
-        "precio": 200.00,
-        "imagen": "ruta/a/imagen2.jpg"
+        "nombre": "Tarjetas de Presentación",
+        "descripcion": "Tarjetas Profesionales.",
+        "precio": 18000.00,
+        "imagen": "assets/tarjetas.jpg"
     },
     {
         "id": 3,
-        "nombre": "Posters",
-        "descripcion": "Posters de gran tamaño impresos en papel fotográfico.",
-        "precio": 300.00,
-        "imagen": "ruta/a/imagen3.jpg"
+        "nombre": "Flyers",
+        "descripcion": "Flyers publicitarios.",
+        "precio": 3600.00,
+        "imagen": "assets/flyers.jpg"
     },
     {
         "id": 4,
-        "nombre": "Calendarios",
-        "descripcion": "Calendarios personalizados con diseño único.",
-        "precio": 150.00,
-        "imagen": "ruta/a/imagen4.jpg"
+        "nombre": "Sellos",
+        "descripcion": "Sellos Personalizados.",
+        "precio": 4500.00,
+        "imagen": "assets/sellos.jpg"
     },
     {
         "id": 5,
-        "nombre": "Brochures",
-        "descripcion": "Brochures plegables con múltiples opciones de papel.",
-        "precio": 250.00,
-        "imagen": "ruta/a/imagen5.jpg"
+        "nombre": "Agendas",
+        "descripcion": "Agendas Anuales.",
+        "precio": 11200.00,
+        "imagen": "assets/agendas.jpg"
+    }
+    {
+        "id": 6,
+        "nombre": "Jarros Térmicos",
+        "descripcion": "Jarros Perosonalizados.",
+        "precio": 6800.00,
+        "imagen": "assets/jarros.jpg"
     }
 ]
