@@ -15,10 +15,10 @@
     },
     {
         "id": 3,
-        "nombre": "Flyers",
-        "descripcion": "Flyers publicitarios.",
-        "precio": 3600.00,
-        "imagen": "assets/flyers.jpg"
+        "nombre": "Banners",
+        "descripcion": "Banners publicitarios.",
+        "precio": 36000.00,
+        "imagen": "assets/banners.jpg"
     },
     {
         "id": 4,
@@ -29,16 +29,16 @@
     },
     {
         "id": 5,
-        "nombre": "Agendas",
-        "descripcion": "Agendas Anuales.",
+        "nombre": "Catalogos",
+        "descripcion": "Catalogos Empresariales.",
         "precio": 11200.00,
-        "imagen": "assets/agendas.jpg"
+        "imagen": "assets/catalogos.jpg"
     }
     {
         "id": 6,
-        "nombre": "Jarros Térmicos",
-        "descripcion": "Jarros Perosonalizados.",
-        "precio": 6800.00,
-        "imagen": "assets/jarros.jpg"
+        "nombre": "Remeras Estampadas",
+        "descripcion": "Elegi tu estampa.",
+        "precio": 11800.00,
+        "imagen": "assets/remeras.jpg"
     }
 ]
