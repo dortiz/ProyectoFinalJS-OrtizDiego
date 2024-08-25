@@ -1,5 +1,5 @@
 import { agregarProductoAlCarrito, cargarCarrito, vaciarCarrito, calcularTotalCarrito } from './cart.js';
-import Swal from 'sweetalert2';
+import Swal from './node_modules/sweetalert2/dist/sweetalert2.all.min.js';
 
 let carrito = cargarCarrito();
 

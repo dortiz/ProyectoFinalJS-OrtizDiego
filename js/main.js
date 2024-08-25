@@ -1,3 +1,4 @@
+console.log('JavaScript está funcionando');
 import { obtenerProductos } from './api.js';
 import { mostrarProductos } from './dom.js';
 import { inicializarApp } from './cart.js';

@@ -1,5 +1,5 @@
 import { mostrarCarrito } from './dom.js';
-import Swal from 'sweetalert2';
+import Swal from './node_modules/sweetalert2/dist/sweetalert2.all.min.js';
 
 // Función para cargar el carrito desde el almacenamiento local
 export function cargarCarrito() {
