@@ -1,4 +1,3 @@
-// dom.js
 import { cargarCarrito, calcularTotalCarrito } from './cart.js';
 
 export function mostrarProductos(productos) {
