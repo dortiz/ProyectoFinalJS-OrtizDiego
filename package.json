@@ -1,0 +1,15 @@
+{
+  "name": "jsfinal",
+  "version": "1.0.0",
+  "description": "Este proyecto es un simulador interactivo de una tienda online donde los usuarios pueden navegar por una selección de productos, agregar productos a un carrito de compras y finalizar la compra. La aplicación utiliza tecnologías web modernas como HTML, CSS, y JavaScript, además de integrar interacción dinámica con el DOM, manejo de eventos, almacenamiento de datos en `LocalStorage`, y la simulación de una base de datos mediante un archivo `JSON`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert2": "^11.12.4"
+  }
+}
