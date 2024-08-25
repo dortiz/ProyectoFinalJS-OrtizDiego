@@ -2,6 +2,7 @@
 import { cargarCarrito, calcularTotalCarrito } from './cart.js';
 
 export function mostrarProductos(productos) {
+    console.log('Productos a mostrar:', productos);
     const contenedorProductos = document.getElementById('productos');
     contenedorProductos.innerHTML = '';
 
@@ -24,11 +25,14 @@ export function mostrarProductos(productos) {
 
 
 export function mostrarCarrito() {
+    console.log('Mostrando carrito');
+
     const contenedorCarrito = document.getElementById('carrito');
     const carrito = cargarCarrito();
     contenedorCarrito.innerHTML = '';
 
     carrito.forEach((producto, index) => {
+        console.log('Producto en carrito:', producto);
         contenedorCarrito.innerHTML += `<p>${index + 1}. ${producto.nombre} (x${producto.cantidad}) - $${(producto.precio * producto.cantidad).toFixed(2)}</p>`;
     });
 
