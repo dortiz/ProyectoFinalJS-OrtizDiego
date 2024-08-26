@@ -1,4 +1,3 @@
-import Swal from 'sweetalert2';
 import { mostrarCarrito } from './dom.js';
 
 export function cargarCarrito() {
@@ -20,12 +19,15 @@ export function agregarProductoAlCarrito(producto) {
     }
 
     guardarCarrito(carrito);
-    Swal.fire({
-        title: '¡Éxito!',
+    mostrarCarrito();  // Actualiza el carrito en el DOM
+
+    Toastify({
         text: `Producto ${producto.nombre} agregado al carrito`,
-        icon: 'success'
-    });
-    mostrarCarrito();
+        duration: 5000,
+        gravity: 'top',
+        position: 'right',
+        backgroundColor: '#4caf50',
+    }).showToast();
 }
 
 export function eliminarProductoDelCarrito(idProducto) {
@@ -33,12 +35,15 @@ export function eliminarProductoDelCarrito(idProducto) {
     carrito = carrito.filter(producto => producto.id !== idProducto);
 
     guardarCarrito(carrito);
-    Swal.fire({
-        title: '¡Eliminado!',
+    mostrarCarrito();  // Actualiza el carrito en el DOM
+
+    Toastify({
         text: 'Producto eliminado del carrito',
-        icon: 'info'
-    });
-    mostrarCarrito();
+        duration: 5000,
+        gravity: 'top',
+        position: 'right',
+        backgroundColor: '#f44336',
+    }).showToast();
 }
 
 export function calcularTotalCarrito() {
@@ -48,9 +53,5 @@ export function calcularTotalCarrito() {
 
 export function vaciarCarrito() {
     localStorage.removeItem('carrito');
-    mostrarCarrito();
-}
-
-export function inicializarApp() {
     mostrarCarrito();
 }

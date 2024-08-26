@@ -32,7 +32,7 @@
         "nombre": "Catalogos",
         "descripcion": "Catalogos Empresariales.",
         "precio": 11200.00,
-        "imagen": "assets/catalogos.jpg"
+        "imagen": "assets/catalogos.png"
     },
     {
         "id": 6,

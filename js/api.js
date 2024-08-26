@@ -1,4 +1,3 @@
-// api.js
 export async function obtenerProductos() {
     try {
         const response = await fetch('./json/products.json');
@@ -9,11 +8,14 @@ export async function obtenerProductos() {
         return productos;
     } catch (error) {
         console.error('Error al cargar los productos:', error);
-        Swal.fire({
-            title: 'Error',
-            text: 'Error al cargar los productos. Intenta nuevamente más tarde.',
-            icon: 'error'
-        });
+        Toastify({
+            text: "Error al cargar los productos. Intenta nuevamente más tarde.",
+            duration: 5000,
+            backgroundColor: "#f44336",
+            gravity: "top",
+            position: "center",
+        }).showToast();
         return [];
     }
 }
+
