@@ -1,17 +1,14 @@
+import Swal from 'sweetalert2';
 import { mostrarCarrito } from './dom.js';
-import Swal from './node_modules/sweetalert2/dist/sweetalert2.all.min.js';
 
-// Función para cargar el carrito desde el almacenamiento local
 export function cargarCarrito() {
     return JSON.parse(localStorage.getItem('carrito')) || [];
 }
 
-// Función para guardar el carrito en el almacenamiento local
 export function guardarCarrito(carrito) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-// Función para agregar un producto al carrito
 export function agregarProductoAlCarrito(producto) {
     let carrito = cargarCarrito();
     const productoExistente = carrito.find(item => item.id === producto.id);
@@ -23,31 +20,37 @@ export function agregarProductoAlCarrito(producto) {
     }
 
     guardarCarrito(carrito);
-    Swal.fire(`Producto ${producto.nombre} agregado al carrito`);
+    Swal.fire({
+        title: '¡Éxito!',
+        text: `Producto ${producto.nombre} agregado al carrito`,
+        icon: 'success'
+    });
     mostrarCarrito();
 }
 
-// Función para eliminar un producto del carrito
 export function eliminarProductoDelCarrito(idProducto) {
     let carrito = cargarCarrito();
     carrito = carrito.filter(producto => producto.id !== idProducto);
 
     guardarCarrito(carrito);
-    Swal.fire('Producto eliminado del carrito');
+    Swal.fire({
+        title: '¡Eliminado!',
+        text: 'Producto eliminado del carrito',
+        icon: 'info'
+    });
     mostrarCarrito();
 }
 
-// Función para calcular el total del carrito
 export function calcularTotalCarrito() {
     const carrito = cargarCarrito();
     return carrito.reduce((total, producto) => total + (producto.precio * producto.cantidad), 0);
 }
 
-// Función para vaciar el carrito
 export function vaciarCarrito() {
     localStorage.removeItem('carrito');
     mostrarCarrito();
 }
 
-// Mostrar el carrito actualizado
-mostrarCarrito();
+export function inicializarApp() {
+    mostrarCarrito();
+}

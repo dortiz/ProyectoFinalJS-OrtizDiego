@@ -1,7 +1,6 @@
-import { agregarProductoAlCarrito, cargarCarrito, vaciarCarrito, calcularTotalCarrito } from './cart.js';
-import Swal from './node_modules/sweetalert2/dist/sweetalert2.all.min.js';
-
-let carrito = cargarCarrito();
+import { agregarProductoAlCarrito, vaciarCarrito, cargarCarrito, calcularTotalCarrito } from './cart.js';
+import { mostrarCarrito } from './dom.js';
+import Swal from 'sweetalert2';
 
 document.getElementById('productos').addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON') {
@@ -13,11 +12,20 @@ document.getElementById('productos').addEventListener('click', (e) => {
 });
 
 document.getElementById('finalizarCompra').addEventListener('click', () => {
+    const carrito = cargarCarrito();
     if (carrito.length === 0) {
-        Swal.fire('El carrito está vacío.');
+        Swal.fire({
+            title: 'Carrito Vacío',
+            text: 'El carrito está vacío.',
+            icon: 'warning'
+        });
     } else {
         const total = calcularTotalCarrito();
-        Swal.fire(`Compra finalizada. Total: $${total.toFixed(2)}. ¡Gracias por tu compra!`);
+        Swal.fire({
+            title: 'Compra Finalizada',
+            text: `Total: $${total.toFixed(2)}. ¡Gracias por tu compra!`,
+            icon: 'success'
+        });
         vaciarCarrito();
     }
 });
