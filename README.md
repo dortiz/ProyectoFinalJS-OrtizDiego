@@ -2,22 +2,18 @@
 
 ## Descripción
 
-Este proyecto es un simulador interactivo de una tienda online donde los usuarios pueden navegar por una selección de productos, agregar productos a un carrito de compras y finalizar la compra. La aplicación utiliza tecnologías web modernas como HTML, CSS, y JavaScript, además de integrar interacción dinámica con el DOM, manejo de eventos, almacenamiento de datos en `LocalStorage`, y la simulación de una base de datos mediante un archivo `JSON`.
+Este proyecto es un simulador interactivo de una tienda online donde los usuarios pueden navegar por una selección de productos, agregar productos a un carrito de compras y finalizar la compra. La aplicación utiliza tecnologías web modernas como HTML, CSS, y JavaScript, además de integrar interacción dinámica con el DOM, manejo de eventos, almacenamiento de datos en `LocalStorage`, y la simulación de una base de datos mediante un archivo `JSON`. Utilizando la biblioteca Toastify para mostrar mensajes de alerta.
 
 ## Estructura del Proyecto
 
-│── /css
-│ └── styles.css # Hoja de estilo principal
-│── /js
-│ ├── main.js # Lógica principal del simulador
-│ ├── stock.js # Datos de productos
-│ └── events.js # Manejador de eventos del DOM
-│── /json
-│ └── products.json # Base de datos simulada
-├── /assets
-│ └── logo.png # Imágenes y otros recursos multimedia
-├── index.html # Documento HTML principal
-├── README.md # Instrucciones de uso y detalles del proyecto
+index.html: Archivo principal HTML.
+css/styles.css: Estilos para el proyecto.
+js/api.js: Módulo para obtener productos de una API.
+js/dom.js: Módulo para manipular el DOM y mostrar productos y el carrito.
+js/cart.js: Módulo para manejar el carrito de compras.
+js/stock.js: Módulo para inicializar y cargar productos.
+js/events.js: Módulo para manejar eventos de la aplicación.
+assets/: Carpeta que contiene las imágenes de los productos y el favicon.
 
 
 ## Requisitos
@@ -27,30 +23,55 @@ Antes de ejecutar el proyecto, asegúrate de cumplir con los siguientes requisit
 - Navegador web moderno (Chrome, Firefox, Edge, Safari)
 - Conexión a Internet para cargar el framework Bootstrap
 
+## Uso Online
+
+Ingresar al siguiente link y navergar y utilizar sus funciones libremente. 
+
+https://dortiz.github.io/ProyectoFinalJS-OrtizDiego/
+
 ## Instalación
 
-No se requiere una instalación compleja. Simplemente sigue estos pasos:
+Clonar el Repositorio
 
-1. Descarga o clona este repositorio en tu máquina local.
-2. Abre el archivo `index.html` en tu navegador web favorito.
+1 - Clona el repositorio a tu máquina local usando Git:
+
+git clone https://github.com/tu_usuario/tu_repositorio.git
+
+2 -Instalar Dependencias
+No se requieren dependencias externas para este proyecto, pero asegúrate de tener una conexión a Internet para cargar recursos desde CDNs.
+
+3 -Estructura de Archivos
+
+HTML: El archivo index.html contiene la estructura básica de la página.
+CSS: Los estilos están definidos en css/styles.css.
+JavaScript: Los módulos de JavaScript están en la carpeta js.
+
+4 -Iniciar el Proyecto
+
+Abre el archivo index.html en tu navegador para ver el proyecto en acción. No es necesario configurar un servidor local para este proyecto, pero si deseas hacerlo, puedes usar un servidor local como http-server para Node.js:
+
+
+npx http-server
+Luego, abre http://localhost:8080 en tu navegador para ver la aplicación.
 
 ## Uso
 
-### Navegación y selección de productos
+1 - Ver Productos
 
-1. Al cargar la página, se mostrarán los productos disponibles en forma de tarjetas (cards).
-2. Cada tarjeta contiene el nombre del producto, una breve descripción, el precio, y un botón "Agregar al Carrito".
-3. Haz clic en el botón "Agregar al Carrito" para seleccionar un producto. Se añadirá automáticamente al carrito, almacenado en `LocalStorage`.
+Los productos se muestran en la sección de productos de la página principal. Cada producto tiene un botón para agregarlo al carrito.
 
-### Visualización del carrito de compras
+2 - Agregar Productos al Carrito
 
-- Los productos seleccionados se mostrarán en la sección "Carrito de Compras", ubicada en la parte inferior de la página.
-- El carrito muestra el nombre de los productos seleccionados y el total acumulado de la compra.
+Haz clic en el botón "Agregar al Carrito" para añadir un producto al carrito. El carrito se actualiza automáticamente y muestra los productos agregados.
 
-### Finalización de la compra
+3 - Eliminar Productos del Carrito
 
-- Haz clic en el botón "Finalizar Compra" para completar el proceso. El total de la compra se mostrará y el carrito se vaciará.
-- Al finalizar la compra, los datos del carrito se eliminan del `LocalStorage`.
+Los productos pueden ser eliminados del carrito usando el botón correspondiente en la vista del carrito.
+
+4 - Finalizar Compra
+
+Haz clic en el botón "Finalizar Compra" para completar el proceso de compra. El carrito se vaciará y se mostrará un mensaje de agradecimiento.
+
 
 ## Tecnologías Utilizadas
 
@@ -59,6 +80,7 @@ No se requiere una instalación compleja. Simplemente sigue estos pasos:
 - **JavaScript**: Lógica principal de la aplicación, manipulación del DOM, manejo de eventos y almacenamiento en `LocalStorage`.
 - **Bootstrap 4**: Framework CSS para el diseño responsivo.
 - **JSON**: Archivo simulado de base de datos para almacenar los productos.
+- **Toastify**: Biblioteca para mostrar mensajes de alerta.
 
 ## Funcionalidades Clave
 
@@ -78,12 +100,6 @@ No se requiere una instalación compleja. Simplemente sigue estos pasos:
 - **Integración con una API real**: Se puede conectar el simulador a una API para manejar productos dinámicos en tiempo real.
 - **Autenticación de Usuarios**: Se podría agregar una capa de autenticación para permitir a los usuarios iniciar sesión y guardar sus compras.
 - **Métodos de Pago**: Integrar un simulador de métodos de pago para completar la experiencia de compra.
-
-## Guía de Uso
-
-1. Clona el repositorio: `git clone https://github.com/dortiz/ProyectoFinalJS-OrtizDiego`
-2. Navega a la carpeta del proyecto: `cd ProyectoFinalJS-OrtizDiego`
-3. Abre `index.html` en un navegador web para iniciar la aplicación.
 
 ## Autor
 
