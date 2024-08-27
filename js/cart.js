@@ -19,15 +19,12 @@ export function agregarProductoAlCarrito(producto) {
     }
 
     guardarCarrito(carrito);
-    mostrarCarrito();  // Actualiza el carrito en el DOM
-
     Toastify({
-        text: `Producto ${producto.nombre} agregado al carrito`,
-        duration: 5000,
-        gravity: 'top',
-        position: 'right',
-        backgroundColor: '#4caf50',
+        text: `Producto ${producto.nombre} agregado al carrito.`,
+        duration: 3000,
+        backgroundColor: '#2ecc71'
     }).showToast();
+    mostrarCarrito(); 
 }
 
 export function eliminarProductoDelCarrito(idProducto) {
@@ -35,15 +32,12 @@ export function eliminarProductoDelCarrito(idProducto) {
     carrito = carrito.filter(producto => producto.id !== idProducto);
 
     guardarCarrito(carrito);
-    mostrarCarrito();  // Actualiza el carrito en el DOM
-
     Toastify({
-        text: 'Producto eliminado del carrito',
-        duration: 5000,
-        gravity: 'top',
-        position: 'right',
-        backgroundColor: '#f44336',
+        text: 'Producto eliminado del carrito.',
+        duration: 3000,
+        backgroundColor: '#e74c3c'
     }).showToast();
+    mostrarCarrito();
 }
 
 export function calcularTotalCarrito() {
@@ -53,5 +47,9 @@ export function calcularTotalCarrito() {
 
 export function vaciarCarrito() {
     localStorage.removeItem('carrito');
-    mostrarCarrito();
+    Toastify({
+        text: 'Carrito vacío.',
+        duration: 3000,
+        backgroundColor: '#e74c3c'
+    }).showToast();
 }
