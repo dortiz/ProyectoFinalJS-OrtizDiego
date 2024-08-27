@@ -26,7 +26,7 @@ h1 {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: #7a1372; 
+    background-color: #a70fe4; 
     color: white;
     border-radius: 50%;
     padding: 5px 10px;
@@ -59,11 +59,12 @@ h1 {
 }
 
 .cart-content {
-    background: #fff;
+    background: #343a40;
     padding: 20px;
     border-radius: 8px;
     max-width: 600px;
     width: 100%;
+    color: #fff
 }
 
 .cart-modal > h2 {
@@ -73,18 +74,22 @@ h1 {
 .cart-modal .btn {
     width: 100%;
     margin-top: 10px;
+    border: none;
 }
 
 .cart-modal .btn-danger {
-    background-color: #e561f1; 
+    background-color: #a70fe4;
+    color: #fff
 }
 
 .cart-modal .btn-primary {
-    background-color: #2ecc71; 
+    background-color: #2ecc71;
+    color: #fff 
 }
 
 .cart-modal .btn-warning {
-    background-color: #3d3b36; 
+    background-color: #45456d;
+    color: #fff 
 }
 
 /* Estilo para los productos en la pantalla del carrito */
@@ -92,10 +97,11 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    color: #fff
 }
 
 .cart-modal .producto span {
-    color: #343a40;
+    color: #fff
 }
 
 /* Estilos para las tarjetas de productos */
