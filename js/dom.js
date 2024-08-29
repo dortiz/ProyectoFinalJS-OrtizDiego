@@ -12,7 +12,7 @@ export function mostrarProductos(productos) {
                     <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}" style="object-fit: cover; height: 200px;">
                     <div class="card-body">
                         <h5 class="card-title">${producto.nombre}</h5>
-                        <h4 class="card-description">${producto.descripcion}</h4>
+                        <h3 class="card-description">${producto.descripcion}</h3>
                         <p class="card-text">$${producto.precio.toFixed(2)}</p>
                         <button class="btn btn-success" data-id="${producto.id}" data-nombre="${producto.nombre}" data-precio="${producto.precio}">Agregar al carrito</button>
                     </div>
