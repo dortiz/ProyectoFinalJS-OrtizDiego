@@ -125,16 +125,19 @@ h1 {
 
 .card-title, .card-text {
     color: #ffffff; 
+    justify-content: center;
 }
 
 .btn-primary {
     background-color: #28a745; 
-    border-color: #28a745; 
+    border-color: #28a745;
+    align-items: center; 
 }
 
 .btn-primary:hover {
     background-color: #218838; 
     border-color: #1e7e34; 
+    align-items: center; 
 }
 
 /* Efecto spinner de carga  */
