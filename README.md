@@ -6,14 +6,14 @@ Este proyecto es un simulador interactivo de una tienda online donde los usuario
 
 ## Estructura del Proyecto
 
-index.html: Archivo principal HTML.
-css/styles.css: Estilos para el proyecto.
-js/api.js: Módulo para obtener productos de una API.
-js/dom.js: Módulo para manipular el DOM y mostrar productos y el carrito.
-js/cart.js: Módulo para manejar el carrito de compras.
-js/stock.js: Módulo para inicializar y cargar productos.
-js/events.js: Módulo para manejar eventos de la aplicación.
-assets/: Carpeta que contiene las imágenes de los productos y el favicon.
+- index.html: Archivo principal HTML.
+- css/styles.css: Estilos para el proyecto.
+- js/api.js: Módulo para obtener productos de una API.
+- js/dom.js: Módulo para manipular el DOM y mostrar productos y el carrito.
+- js/cart.js: Módulo para manejar el carrito de compras.
+- js/stock.js: Módulo para inicializar y cargar productos.
+- js/events.js: Módulo para manejar eventos de la aplicación.
+- assets/: Carpeta que contiene las imágenes de los productos y el favicon.
 
 
 ## Requisitos
